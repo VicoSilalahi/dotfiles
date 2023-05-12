@@ -1,0 +1,141 @@
+ -- Chosen configuration --
+{
+    "__separator__": null,
+    "additional-repositories": [
+        "multilib"
+    ],
+    "archinstall-language": "English",
+    "audio": "pipewire",
+    "bootloader": "grub-install",
+    "config_version": "2.5.5",
+    "debug": false,
+    "disk_encryption": null,
+    "gfx_driver": "VMware / VirtualBox (open-source)",
+    "harddrives": [
+        "/dev/sda"
+    ],
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "keyboard-layout": "us",
+    "mirror-region": {
+        "Indonesia": {
+            "http://kebo.pens.ac.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.ditatompel.com/archlinux/$repo/os/$arch": true,
+            "http://mirror.faizuladib.com/archlinux/$repo/os/$arch": true,
+            "http://mirror.gi.co.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.papua.go.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.repository.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.telkomuniversity.ac.id/archlinux/$repo/os/$arch": true,
+            "http://vpsmurah.jagoanhosting.com/archlinux/$repo/os/$arch": true,
+            "https://mirror.ditatompel.com/archlinux/$repo/os/$arch": true,
+            "https://mirror.gi.co.id/archlinux/$repo/os/$arch": true,
+            "https://mirror.repository.id/archlinux/$repo/os/$arch": true,
+            "https://mirror.telkomuniversity.ac.id/archlinux/$repo/os/$arch": true,
+            "https://vpsmurah.jagoanhosting.com/archlinux/$repo/os/$arch": true
+        }
+    },
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "neovim",
+        "htop",
+        "neofetch",
+        "tmux",
+        "git",
+        "lxappearance",
+        "xclip",
+        "flameshot",
+        "xorg-xinit",
+        "i3"
+    ],
+    "parallel downloads": 0,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+    },
+    "save_config": null,
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "Asia/Jakarta",
+    "version": "2.5.5"
+}
+{
+    "/dev/sda": {
+        "partitions": [
+            {
+                "boot": true,
+                "encrypted": false,
+                "filesystem": {
+                    "format": "fat32"
+                },
+                "mountpoint": "/boot",
+                "size": "203MiB",
+                "start": "3MiB",
+                "type": "primary",
+                "wipe": true
+            },
+            {
+                "btrfs": {
+                    "subvolumes": [
+                        {
+                            "compress": false,
+                            "mountpoint": "/",
+                            "name": "@",
+                            "nodatacow": false
+                        },
+                        {
+                            "compress": false,
+                            "mountpoint": "/home",
+                            "name": "@home",
+                            "nodatacow": false
+                        },
+                        {
+                            "compress": false,
+                            "mountpoint": "/var/log",
+                            "name": "@log",
+                            "nodatacow": false
+                        },
+                        {
+                            "compress": false,
+                            "mountpoint": "/var/cache/pacman/pkg",
+                            "name": "@pkg",
+                            "nodatacow": false
+                        },
+                        {
+                            "compress": false,
+                            "mountpoint": "/.snapshots",
+                            "name": "@.snapshots",
+                            "nodatacow": false
+                        }
+                    ]
+                },
+                "encrypted": false,
+                "filesystem": {
+                    "format": "btrfs",
+                    "mount_options": [
+                        "compress=zstd"
+                    ]
+                },
+                "mountpoint": null,
+                "size": "100%",
+                "start": "206MiB",
+                "type": "primary",
+                "wipe": true
+            }
+        ],
+        "wipe": true
+    }
+}
