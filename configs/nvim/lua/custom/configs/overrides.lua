@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "latex",
   },
   indent = {
     enable = true,
@@ -37,6 +38,8 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+    "texlab",
+    "marksman",
   },
 }
 
