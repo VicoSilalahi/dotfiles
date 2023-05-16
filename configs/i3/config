@@ -10,10 +10,10 @@ exec_always --no-startup-id xrdb ~/.Xresources
 
 
 exec --no-startup-id gt &
-exec --no-startup-id picom &
+exec_always --no-startup-id picom &
 exec --no-startup-id nm-applet
-exec --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-fill --randomize $HOME/.wallpapers/*
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill --randomize $HOME/.wallpapers/*
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -50,9 +50,10 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start menu (a program launcher)
-bindsym $mod+d exec --no-startup-id exec rofi -show run
-bindsym $mod+z exec --no-startup-id exec rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+z exec --no-startup-id rofi -show drun
 bindsym $alt+Tab --release exec rofi -show window
+bindsym $mod+p exec --no-startup-id rofi -show emoji
 
 # change focus
 bindsym $mod+$left focus left
@@ -197,9 +198,27 @@ bar {
 }
 
 
-default_border pixel 2
+default_border pixel 0
 
 gaps inner 5px
 smart_gaps on
 smart_borders on
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #F0C674 #282A2E #C5C8C6 #2e9ef4   #285577
+client.focused_inactive #F0C674 #282A2E #C5C8C6 #484e50   #5f676a
+client.unfocused        #333333 #373B41 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #C5C8C6 #900000   #900000
+client.placeholder      #000000 #0c0c0c #C5C8C6 #000000   #0c0c0c
+
+client.background       #ffffff
+
+# background = #282A2E
+# background-alt = #373B41
+# foreground = #C5C8C6
+# primary = #F0C674
+# secondary = #8ABEB7
+# alert = #A54242
+# disabled = #707880
+
 

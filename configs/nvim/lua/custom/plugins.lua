@@ -59,6 +59,10 @@ local plugins = {
   {
     "vimwiki/vimwiki",
     lazy = false,
+    config = function()
+      require("custom.configs.vimwiki")
+      vim.cmd("call vimwiki#vars#init()")
+    end,
   }
   -- To make a plugin not be loaded
   -- {
