@@ -57,7 +57,10 @@
         "xclip",
         "flameshot",
         "xorg-xinit",
-        "i3"
+        "i3",
+        "firefox",
+        "polybar",
+        "lightdm"
     ],
     "parallel downloads": 0,
     "profile": {
